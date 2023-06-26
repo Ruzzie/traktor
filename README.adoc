@@ -1,0 +1,9 @@
+Disclaimer: This is a thought experiment!
+
+Can we use the Actor model of programming, or at least a large part of it for:
+
+- Better state management (immutability and message passing, where ordering is local)
+- Introduce ECS in the scheduling and storage of data to optimize for data locality and realize high throughput of messages where the actor logic is cpu-bound
+- Host it in a 'cloud native' way eg. in a webapp (where Azure is concerned) such that we do not have to introduce infra complexity that is tightly coupled with our application eg. containers.
+- Opt for an alternative processing pipeline instead of Azure functions (since they now embrace the microservice philosophy where a 'call' is a http request in their new model.
+- Not cloud scale, but company scale. Most applications in the world do not require large multi-node distributed systems as such much complexity and performance is lost due to constant out of process communication. The premise here is we can do much more with less
